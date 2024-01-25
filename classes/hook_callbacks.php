@@ -37,6 +37,6 @@ class hook_callbacks {
 
         $text = get_string('customintro', 'local_activityintro');
         $html = html_writer::tag('div', $text, ['class' => 'alert alert-info alert-block']);
-        $hook->intro = $html . $hook->intro;
+        $hook->set_intro($html . $hook->get_intro());
     }
 }
